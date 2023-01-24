@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+    --color-primary: #06181C;
+    --color-btn: #065E7C;
+    --color-border-table: #4A808C;
+    --color-bd-table: #092D38;
+    --fc-primary: #FFFFFF;
+    --fc-btn-remove:#F75A68; 
+}
+
+body{
+   font-size: 1.6rem;
+   
+   background-color: #000000;
+   
+   padding: 11.5rem 16rem;
+}
+
+.container{
+    max-width: 112rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8.7rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.search input{
+    width: 46.2rem;
+    height: 4.8rem;
+    padding: 1.6rem;
+
+    border-radius: 2px;
+    border: none;
+    
+    background-color: var(--color-primary);
+
+    font-size: 1.6rem;
+    color: var(--fc-primary);
+}
+
+.search button{
+    display: flex;
+    align-items: flex-end;
+    gap: 0.8rem;
+
+    background-color: var(--color-btn);
+    
+    padding: 1.2rem 3.2rem;
+    
+    border-radius: 5px;
+
+    color: var(--fc-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.search button path{
+    fill: var(--fc-primary);
+}
+
+.search button:hover{
+    cursor: pointer;
+
+    background-color: #FFFFFF;
+    color: var(--color-btn);
+}
+
+.container table{
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: var(--color-bd-table);
+    height: 6.4rem;
+    text-align: left;
+}
+
+table thead tr{
+    color: var(--fc-primary);
+}
+
+table th{
+    text-align: left;
+    padding: 1.4rem;
+}
+
+table th:first-child{
+    border-top-left-radius: 12px;
+}
+
+table th:last-child{
+    border-top-right-radius: 12px;
+}
+
+#user{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#user img{
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+
+table td{
+    padding: 1.5rem;
+}
+
+table td a{
+    text-decoration: none;
+    color: var(--fc-primary);
+}
+
+table tr{
+    color: var(--fc-primary);
+}
+
+table tr:nth-child(odd){
+    background: rgba(6, 22, 27, 0.5);
+}
+
+table tr:nth-child(even){
+    background: var(--color-primary)
+}
+
+#btn_action button{
+    color: var(--fc-btn-remove);
+    
+    background: none;
+    border: none;
+
+    font-weight: bold;
+    font-size: 2.0rem;
+
+    transition: 0.3s;
+}
+
+#btn_action button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
