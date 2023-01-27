@@ -9,9 +9,9 @@
 
 :root{
     font-size: 62.5%;
+    --color-background: #000000;
     --color-primary: #06181C;
     --color-btn: #065E7C;
-    --color-border-table: #4A808C;
     --color-bd-table: #092D38;
     --fc-primary: #FFFFFF;
     --fc-btn-remove:#F75A68; 
@@ -20,7 +20,7 @@
 body{
    font-size: 1.6rem;
    
-   background-color: #000000;
+   background-color: var(--color-background);
    
    padding: 11.5rem 16rem;
 }
@@ -138,12 +138,13 @@ table tr{
     color: var(--fc-primary);
 }
 
-table tr:nth-child(odd){
-    background: rgba(6, 22, 27, 0.5);
-}
-
 table tr:nth-child(even){
     background: var(--color-primary)
+}
+
+table tbody {
+    border: 1px solid var(--color-bd-table);
+    background-color: var(--color-background);
 }
 
 #btn_action button{
@@ -162,3 +163,20 @@ table tr:nth-child(even){
     cursor: pointer;
     transform: scale(1.1);
 }
+
+
+.no-fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 50vh;
+    width: 160%;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  
+  .no-fav svg {
+    width: clamp(8rem, 8rem + 10vw, 10rem);
+    height: auto;
+  }
